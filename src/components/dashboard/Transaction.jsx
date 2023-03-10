@@ -49,7 +49,7 @@ const Transaction = () => {
 
                                 </ul>
                                 <li className='flex flexSpacebtw' style={{width: '35%'}}>
-                                 <div  style={{width: '50.99px', height: '50.99px'}}><img src={User} alt="user" /></div>
+                                 <div  style={{width: '50.99px', height: '50.99px'}}><NavLink  to='/profile'><img src={User} alt="user" /></NavLink></div>
                                  <h6 className='align-center' style={{fontWeight: '700'}}>Rovel Jordan</h6>
                                  <div style={{marginTop: '17px'}}><img src={Icon} alt="" /></div>
                                 </li>
@@ -61,7 +61,7 @@ const Transaction = () => {
                           <li className='logo2' onClick={openMenu} style={{fontSize: '30px', marginTop: '-15px'}}>
                            <GoThreeBars/>
                           </li>
-                          <div  style={{width: '50.99px', height: '50.99px', marginTop: '-15px'}}><img src={User} alt="user" /></div>
+                          <div  style={{width: '50.99px', height: '50.99px', marginTop: '-15px'}}><NavLink  to='/profile'><img src={User} alt="user" /></NavLink></div>
                         </div>
                                 <li className='dash_searchbar' style={{gap:'10px'}}>
                                     <form >

@@ -92,7 +92,9 @@ const Collection = () => {
             return(
         <section key={id} className='secondcat-card flex flexColumn mb-5'>
         <div className='secondcat-image'>
+        <NavLink   to='/collectionprofile' >
             <img src={image} alt="location" />
+            </NavLink> 
         </div>
         <div className='flex gap-20 secondcat-top collection-card-large'>
         <div className='user-circle mt-3' style={{width: '59px', height: '59px'}}>

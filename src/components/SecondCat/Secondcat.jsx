@@ -1,5 +1,6 @@
 import React from 'react'
 import './SecondCat.css'
+import { NavLink } from 'react-router-dom'
 import {HiLocationMarker} from 'react-icons/hi'
 import stars from '../../assets/star.png'
 import User1 from '../../assets/profileuser1.png'
@@ -17,7 +18,7 @@ const SecondCat = () => {
     <section className = 'section section-container '> 
     <div className="flex flexSpacebtw" style={{marginBottom: '50px'}}>
     <h4>Nearby Recycling Station</h4>
-    <span style={{color: '#118924'}}>View All</span>
+    <NavLink style={{textDecoration: 'none', color: '#118924'}}   to='/collections' ><span style={{color: '#118924'}}>View All</span></NavLink>
 </div>
     <main className="testimonials flex">
     {

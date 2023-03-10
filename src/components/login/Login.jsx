@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './Login.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import bg from '../../assets/loginbg.svg'
 import logo from '../../assets/logo.svg'
 import google from '../../assets/Google.png'
 import facebook from '../../assets/Facebook2.png'
@@ -71,9 +72,12 @@ const renderErrorMessage = (name) =>
     return (
        <section style={{width: '100%'}}>
           <section className="login-wrapper flex flexCenter" >
+          <section style={{flexBasis: '50%'}} className='signupas-left-section'>
+          <img src={bg} alt="" />
+           </section>
 
-<section className='login_form__container'>
-<form onSubmit={handleSubmit} method="get" className="login_signup_form" style={{margin: 0}}>
+<section className='login_form__container' >
+<form onSubmit={handleSubmit}  className="login_signup_form ft" style={{margin: 0, height: '100%'}}>
 <div className="flex flexColumn flexCenter">
 <div style={{width: '200px'}}>
     <img src={logo} alt="" style={{width: '100%'}} />
@@ -95,6 +99,7 @@ const renderErrorMessage = (name) =>
 {renderErrorMessage("email")}
 <div className="mt-2 form-input">
   <label  className="form-label">Password</label>
+  <div className="form-test">
   <input
     type={passwordType}
     className="form-control"
@@ -106,6 +111,7 @@ const renderErrorMessage = (name) =>
   <span className="login_password" onClick={togglePassword}>
   { passwordType==="password"? <BsFillEyeFill/> :<BsFillEyeSlashFill/>  }
   </span>
+  </div>
 </div>
 {renderErrorMessage("pass")}
 <div className="mb-3 forgot flex">

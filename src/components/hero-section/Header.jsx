@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import girlimg from '../../assets/girl1.svg'
+import { NavLink } from 'react-router-dom'
 
 const Header = ({images,title}) => {
   return (
@@ -15,9 +16,9 @@ const Header = ({images,title}) => {
           We give plastics new life.</p>
             
 
-           <button className='button btn-1'>
+          <NavLink style={{textDecoration: 'none'}}  to ='/signupas' ><button className='button btn-1'>
             Learn More
-           </button>
+           </button></NavLink>
           </div>
            <div className='radios'>
             <div className="radio activeRadio"></div>

@@ -1,17 +1,15 @@
 .login-wrapper{
-    padding: 70px;
-    background-color: var(--color-light);
-    background-image: url("../../assets/loginbackground.png");
+    background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .login_form__container {
     background-color: white;
-    width: 40.625rem;
+    flex-basis: 50%;
     margin: auto;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 3px#c4c4c4;
 }
+
+
 
 .form-input input{
     height: 60px;
@@ -19,7 +17,11 @@
     border-radius: 0px;
 }
 .login_signup_form {
-    padding: 5rem;
+    padding: 7rem;
+}
+
+.ft{
+    padding-top: 0;
 }
 
 .gap-20{
@@ -47,10 +49,14 @@
 transition: var(--transition);
 }
 
+.form-test{
+    position: relative;
+}
+
 .login_password{
-position: relative;
-top: -43px;
-left: 455px;
+position: absolute;
+bottom: 15px;
+right: 20px;
 cursor: default;
 }
 
@@ -64,6 +70,20 @@ color: var(--color-green)
 cursor: default;
 }
 
+.signupas-left-section img{
+    height: 1090px;
+   }
+
+
+   @media screen and (max-width: 1100px) {
+
+    .login_signup_form {
+        padding: 4rem;
+    }
+
+
+    
+        }
 @media screen and (max-width: 780px) {
 
     .login_form__container {
@@ -76,9 +96,7 @@ cursor: default;
         padding: 2rem;
     }
 
-    .login_password{
-        left: 395px;
-        }
+
     
         }
 
@@ -99,30 +117,32 @@ cursor: default;
         border: 1px solid #5d5b5c;
         font-size: 16px;
         font-weight: 600;
-    } 
+    }
+    @media screen and (max-width: 764px) {
+.login-wrapper{
+    flex-direction: column;
+}
+.signupas-left-section{
+    height: 200px;
+    width: 100%;
+    background: url(../../assets/loginbg.svg);
+   }
+   .signupas-left-section img{
+    opacity: 0;
+   height: 200px;
+   }
+   }
 
-  
- @media screen and (max-width: 625px) {
-    .login_password{
-        left: 365px;
-        }
-            }
- @media screen and (max-width: 625px) {
-     .login_password{
-         left: 345px;
-         }
-             }
+
+
+
 @media screen and (max-width: 600px) {
     .login-wrapper{
-        padding: 10px;}
+        padding: 0}
     .login_form__container {
           
         width: 20rem;
     }
-
-    .login_password{
-       display: none;
-        }
 
         .special-sign-up{
             font-size: 16px;

@@ -16,6 +16,7 @@ import Transactionpage from './pages/transactionpage'
 import Collection from './pages/Collection'
 import CollectionProfile from './pages/CollectionProfile'
 import ProfileSetup from './pages/ProfileSetup'
+import SignUpOp from './pages/SignUpOp'
 const App = () => {
   return (
     <BrowserRouter>
@@ -63,6 +64,10 @@ const App = () => {
 <Routes>
 <Route path="/" element={<Navigate to="/transactionpage" />} />
 <Route path="/transactionpage" element={<Transactionpage />} />
+</Routes>
+<Routes>
+<Route path="/" element={<Navigate to="/signupas" />} />
+<Route path="/signupas" element={<SignUpOp />} />
 </Routes>
 <Routes>
 <Route path="/" element={<Navigate to="/collections" />} />

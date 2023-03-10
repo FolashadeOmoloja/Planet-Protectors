@@ -1,4 +1,5 @@
 import React,{useState}from 'react'
+import { NavLink, useNavigate } from "react-router-dom";
 import "./setup.css"
 import User from '../../assets/profilesetup.png'
 import Icon from '../../assets/photoicon.png'
@@ -6,8 +7,10 @@ import Checkbox from './check-box/checkbox'
 
 const SetUp = () => {
     const [activeNav, setActiveNav] = useState ('#')
+    const navigate = useNavigate();
     const handleSubmit = (e) =>{
         e.preventDefault()
+        navigate('/profile')
     }
 
     const handleChange = (e) =>{
@@ -27,21 +30,21 @@ const SetUp = () => {
         <div className="flex flexSpacebtw setupfull" style={{width: '100%'}}>
         <div className="mb-4 ">
           <label  className="form-label" style={{fontWeight: "600", fontSize: '15px'}}>First Name</label>
-          <input onChange={handleChange} type="text" className="form-control setup-input" />
+          <input onChange={handleChange} type="text" className="form-control setup-input" required/>
         </div>
         <div className="mb-4 ">
         <label  className="form-label" style={{fontWeight: "600", fontSize: '15px'}}>Last Name</label>
-          <input onChange={handleChange} type="text" className="form-control setup-input" />
+          <input onChange={handleChange} type="text" className="form-control setup-input" required/>
         </div>
         </div>
         <div className="flex flexSpacebtw setupfull" style={{width: '100%'}}>
         <div className="mb-4 ">
           <label  className="form-label" style={{fontWeight: "600", fontSize: '15px'}}>Email</label>
-          <input onChange={handleChange} type="email" className="form-control setup-input" />
+          <input onChange={handleChange} type="email" className="form-control setup-input" required/>
         </div>
         <div className="mb-4 ">
         <label  className="form-label" style={{fontWeight: "600", fontSize: '15px'}}>Phone Number</label>
-          <input onChange={handleChange} type="tel" className="form-control setup-input" />
+          <input onChange={handleChange} type="tel" className="form-control setup-input" required/>
         </div>
         </div>
         <div className="flex flexSpacebtw setupfull mb-4" style={{width: '100%'}}>
@@ -69,7 +72,7 @@ const SetUp = () => {
         <div>
 
         <p style={{fontWeight: "600", fontSize: '15px', marginBottom: '30px'}}>Register</p>
-         <textarea onChange={handleChange} rows="3" className='setup-textarea' name='message' ></textarea>
+         <textarea onChange={handleChange} rows="3" className='setup-textarea' name='message' required></textarea>
          </div>
         </div>
         <div>

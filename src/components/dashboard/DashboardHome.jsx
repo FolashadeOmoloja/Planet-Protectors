@@ -182,7 +182,7 @@ const DashboardHome = () => {
             <div>
                 <ul style={{padding: '0'}}>
                 <li className='align-center'>
-                 <div  style={{marginRight: '10px'}}><img src={User} alt="user" /></div>
+                <div  style={{marginRight: '10px'}}><NavLink  to='/profile'><img src={User} alt="user" /></NavLink></div>
                  <h6  style={{fontWeight: '700', marginRight: '50px'}}>Rovel Jordan</h6>
                  <div><img src={Icon} alt="" /></div>
                 </li>

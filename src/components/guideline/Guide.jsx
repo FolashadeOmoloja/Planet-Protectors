@@ -4,7 +4,7 @@ import './Guide.css'
 const Guide = () => {
     const data = [{id:1, h4: 'Sign Up'},{id:2, h4: 'Connect'},{id:3, h4: 'Sell'}]
   return (
- <section className='section section-container guide-container'>
+ <section className='section section-container guide-container' id='pricing'>
     <h5 className='guide-h5'>How it works</h5>
     <h2>3 Steps To Get Started</h2>
 <main className="guide-innerwrapper">

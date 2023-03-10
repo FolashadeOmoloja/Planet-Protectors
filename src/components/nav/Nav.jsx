@@ -16,7 +16,10 @@ const Nav = () => {
   const [Menu, showMenu] = useState({
     display: "none"
   })
-
+const [isActivate, setIsActivate] = useState(false)
+const handleClick = () =>{
+setIsActivate(!isActivate)
+}
   const openMenu = () =>{
     showMenu({
       display: 'flex'
@@ -38,14 +41,14 @@ const Nav = () => {
     </li>
     <li className='navlinks align-center'>
        <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/home'>Home</NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to ='/features'>Features</NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to ='/Pricing'>Pricing</NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to ='/about'>About Us</NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to ='/contact'>Contact Us</NavLink>
+       <a style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} href ='#features'>Features</a>
+       <a style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} href ='#pricing'>Pricing</a>
+       <a style={{textDecoration: 'none'}} onClick={handleClick}   className={({isActive}) => (isActive ? "active" : '')} href ='#aboutUs'>About Us</a>
+       <a style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} href ='#contact'>Contact Us</a>
     </li>
     <li className='login align-center'>
       <NavLink style={{textDecoration: 'none'}}  to ='/login'>Sign in</NavLink>
-      <NavLink style={{textDecoration: 'none'}}  to ='/signup'  className='SignUp align-center button'>Sign Up</NavLink>
+      <NavLink style={{textDecoration: 'none'}}  to ='/signupas'  className='SignUp align-center button'>Sign Up</NavLink>
     </li>
   </ul>
   <div className='show_menu' style={{...Menu}}>
@@ -59,11 +62,11 @@ const Nav = () => {
   </div>
 
        <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/home'><span className='navicon'><HiHome/></span> <span>Home</span></NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/features'><span className='navicon'><GiStarFormation/></span> <span>Features</span></NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/Pricing'><span className='navicon'><ImPriceTags/></span> <span>Pricing</span></NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/about'><span className='navicon'><MdRecycling/></span> <span>About Us</span></NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/contact'><span className='navicon'><MdOutlineContactSupport/></span> <span>Contact Us</span></NavLink>
-       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/login'><span className='navicon'><BiLogIn/></span> <span>Sign in</span></NavLink>
+       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/home'><span className='navicon'><GiStarFormation/></span> <span>Features</span></NavLink>
+       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/home'><span className='navicon'><ImPriceTags/></span> <span>Pricing</span></NavLink>
+       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/home'><span className='navicon'><MdRecycling/></span> <span>About Us</span></NavLink>
+       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/home'><span className='navicon'><MdOutlineContactSupport/></span> <span>Contact Us</span></NavLink>
+       <NavLink style={{textDecoration: 'none'}}   className={({isActive}) => (isActive ? "active" : '')} to='/profile'><span className='navicon'><BiLogIn/></span> <span>Sign in</span></NavLink>
   </div>
 
 </nav>

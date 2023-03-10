@@ -1,12 +1,14 @@
-.thirdcat-cont{
+.thirdcat-cont, .thirdcat-cont-a{
   gap: 30px;
 }
-.thirdcat-cont>div{
+.thirdcat-cont>div, .thirdcat-cont-a>div{
     width: 600px;
     height: 350px;
     color: white;
     font-family: var(--poppins);
 }
+
+
 
 .thirdcat-card1{
     background: url('../../assets/pbackgroud1.png');
@@ -22,18 +24,38 @@
     background-repeat: no-repeat;
 }
 
+.thirdcat-card3{
+    background: url('../../assets/recyclerbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0px 0 30px;
+}
+
+
 .register{
     color: var(--color-green);
     font-weight: 500;
 }
 
 .register:hover{
-    background-color: transparent;
+    background-color: transparent !important;
     color: white;
     border: 2px solid white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
+    .thirdcat-cont>div{
+        width: 400px;
+    }
+      }
+
+@media screen and (max-width: 1100px) {
+    .thirdcat-cont-a>div{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .thirdcat-cont{
        flex-direction: column;
        align-items: center;
@@ -46,3 +68,15 @@
     
 
         }
+@media screen and (max-width: 800px) {
+            .thirdcat-cont-a>div{
+                width: 300px;
+            }
+        }
+            
+@media screen and (max-width: 600px) {
+            .thirdcat-cont-a>div{
+                width: 100%;
+            }
+        }       
+                

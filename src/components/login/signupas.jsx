@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import axios from "axios"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import './Login.css'
 import logo from '../../assets/logo.svg'
 import google from '../../assets/Google.png'
 import facebook from '../../assets/Facebook2.png'
+import bg from '../../assets/loginbg.svg'
 import twiiter from '../../assets/Twitter2.png'
 import {BsFillEyeFill} from 'react-icons/bs'
 import {BsFillEyeSlashFill} from 'react-icons/bs'
@@ -15,16 +16,22 @@ const SignUpAs = () => {
 
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
-  });
-  const baseUrl = 'https://eco-elites-api.up.railway.app'
-
+    password: ''  });
+  const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
-
-    axios.post(`${baseUrl}/signup`, formData)
+    signUpApi()
+  }
+  const signUpApi = () => {
+    axios.post('https://eco-elites-api.up.railway.app/registration', formData)
       .then(response => {
         console.log('API response:', response.data);
+        if(response.data.message == "Email taken. Try again") {
+          alert("Email Taken.")
+        } else {
+          localStorage.setItem("token",response.data.message)
+          navigate('/setupprofile')
+        }
       })
       .catch(error => {
         console.error('API error:', error);
@@ -47,6 +54,9 @@ const SignUpAs = () => {
     return (
 <section style={{width: '100%'}}>
 <section className="login-wrapper flex flexCenter" >
+  <section style={{flexBasis: '50%'}} className='signupas-left-section'>
+    <img src={bg} alt="" />
+  </section>
 <section className='login_form__container'>
 <form onSubmit={handleSubmit} style={{margin: 0}} className="login_signup_form">
 <div className="flex flexColumn flexCenter">
@@ -69,6 +79,7 @@ const SignUpAs = () => {
 </div>
 <div className="mt-3 form-input">
   <label  className="form-label">Password</label>
+  <div className="form-test">
   <input
     type={passwordType}
     className="form-control"
@@ -81,6 +92,7 @@ const SignUpAs = () => {
   <span className="login_password" onClick={togglePassword}>
   { passwordType==="password"? <BsFillEyeFill/> :<BsFillEyeSlashFill/>  }
   </span>
+  </div>
 </div>
 
  

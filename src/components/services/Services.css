@@ -1,20 +1,54 @@
+.service-container{
+    background: var(--color-light);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 .serviceMain{
     display: flex;
    gap: 50px;
-   background: var(--color-light);
+
 }
+
+.serviceMainOp{
+    display: flex;
+    gap: 20px
+}
+
+.serviceMainnew{
+    background-color:  #F6FCFC;
+   width: 33%;
+}
+
+.serviceMainnew .service-left-section img{
+    height: 280px;
+}
+
 
 .serviceSecondMain{
     margin-top: 50px;
     justify-content: space-between;
 }
 
-.service-right-section{
+.service-right-section, .service-right-sectionnew, .service-right-section-op{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
+
+.service-right-sectionnew div{
+    padding: 20px;
+    width: 97%;
+    margin: auto;
+    margin-top: -60px;
+    background-color: white;
+    border-bottom: 5px solid var(--color-green);
+}
+
+.service-right-sectionnew h3{
+    font-size: 20px;
+}
+
 
 .service-right-section h3{
     width: 450px;
@@ -26,6 +60,28 @@
   color: #374151;
 }
 
+@media screen and (max-width: 1023px) {
+
+.service-flex{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+    
+    }
+
+    @media screen and (max-width: 860px) {
+
+        .service-flex{
+   flex-direction: column;
+        }
+
+        .serviceMainnew{
+           width: 80%;
+        }
+            
+            }
+
 @media screen and (max-width: 800px) {
 
     .service-right-section h3{
@@ -36,13 +92,34 @@
     }
 
 @media screen and (max-width: 600px) {
-    .serviceMain{
+    .serviceMain, .serviceMainOp{
         gap: 0px;
 flex-direction: column;
 align-items: center;
 background-color:  #F6FCFC;
 ;
     }
+
+.service-right-section-op{
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+    .c1{
+        width: 100% !important;
+    }
+
+    .c-c-1{
+        gap: 30px
+    }
+
+    .c2{
+        padding: 0px !important;
+    }
+    .serviceMainnew{
+        width: 100%;
+     }
     .serviceSecondMain{
 flex-direction: column-reverse;
 
@@ -94,6 +171,8 @@ padding: 20px;
         padding: 40px;
     }
 
+
+
     .profilesetupcont{
         margin: auto;
         margin-top: -100px;
@@ -103,12 +182,20 @@ padding: 20px;
         
     }
 
+    .signupop-cont{
+        padding: 40px;
+        width: 90%;
+    }
+
     @media screen and (max-width: 500px) {
         .profilesetupcont{
             width: 90%;
         }
         .profilesetup-p{
             font-size: 30px !important;
+        }
+        .signupop-cont{
+            padding: 20px;
         }
         }
         @media screen and (max-width: 400px) {
